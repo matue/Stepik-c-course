@@ -10,19 +10,17 @@ int main()
     bool n=0;
     char c = '\0'; //нулевой символ
     while (cin.get(c)) {
-        if (c!= ' ' && n==0) {
+        if (c!= ' ') {
             cout << c;
+            if(n){
+                n=0;
+            }
         }
-        else if (c==' ' && n==0) {
-            cout << c;
-            n=1;
-        }
-        else if (c==' ' && n==1) {
-            n=1;
-        }
-        else if (c!=' ' && n==1) {
-            cout << c;
-            n=0;
+        else if (c==' ') {
+            if (!n){
+                cout << c;
+            }
+        n=1;
         }
     }
     return 0;
