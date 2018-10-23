@@ -12,12 +12,12 @@ int main()
     while (cin.get(c)) {
         if (c!= ' ') {
             cout << c;
-            if(n){
+            if (n) {
                 n=0;
             }
         }
         else if (c==' ') {
-            if (!n){
+            if (!n) {
                 cout << c;
             }
         n=1;
